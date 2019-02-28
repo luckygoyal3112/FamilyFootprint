@@ -1,0 +1,49 @@
+apply plugin: 'application'
+
+version = '1.0'
+
+repositories {
+    maven {
+        url 'https://oss.sonatype.org/content/repositories/snapshots'
+    }
+    mavenCentral()
+
+}
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'org.igniterealtime.smack:smack-core:4.1.0'
+    compile 'org.igniterealtime.smack:smack-java7:4.1.0'
+    compile 'org.igniterealtime.smack:smack-tcp:4.1.0'
+    compile 'org.igniterealtime.smack:smack-extensions:4.1.0'
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.google.protobuf:protobuf-java:3.0.0-alpha-2'
+    compile 'com.googlecode.protobuf-java-format:protobuf-java-format:1.2'
+    compile 'com.j256.ormlite:ormlite-core:4.46';
+    compile 'com.j256.ormlite:ormlite-jdbc:4.46';
+    compile 'com.j256.ormlite:ormlite-android:4.48';
+    compile 'org.xerial:sqlite-jdbc:3.7.2';
+}
+
+task deleteJar(type: Delete) {
+    delete ('release/backendserver.jar')
+}
+
+jar {
+    manifest {
+        attributes 'Main-class': 'com.ack.FriendlyPingServer',
+                    'Class-Path': configurations.runtime.files.collect { "lib/$it.name" }.join(' '),
+                    'Implementation-Verison': project.version
+     }
+    from(configurations.compile.collect {  it.isDirectory() ? it : zipTree(it) }) {}
+}
+
+task createJar(type: Copy) {
+    from ('build/intermediates/bundles/release/')
+    into ('build/libs/')
+    include('classes.jar')
+    rename('classes.jar','backendserver.jar')
+}
+
+createJar.dependsOn(deleteJar, build)
+
+mainClassName = 'com.ack.FriendlyPingServer'

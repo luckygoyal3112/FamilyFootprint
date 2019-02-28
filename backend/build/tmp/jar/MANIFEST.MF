@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Main-class: com.ack.FriendlyPingServer
+Class-Path: lib/smack-java7-4.1.0.jar lib/smack-tcp-4.1.0.jar lib/smac
+ k-extensions-4.1.0.jar lib/smack-resolver-javax-4.1.0.jar lib/smack-s
+ asl-javax-4.1.0.jar lib/smack-im-4.1.0.jar lib/smack-core-4.1.0.jar l
+ ib/gson-2.8.0.jar lib/protobuf-java-3.0.0-alpha-2.jar lib/protobuf-ja
+ va-format-1.2.jar lib/ormlite-jdbc-4.46.jar lib/ormlite-android-4.48.
+ jar lib/ormlite-core-4.48.jar lib/sqlite-jdbc-3.7.2.jar lib/jxmpp-cor
+ e-0.4.2-beta1.jar lib/xpp3-1.1.4c.jar lib/jxmpp-util-cache-0.4.2-beta
+ 1.jar
+Implementation-Verison: 1.0
+

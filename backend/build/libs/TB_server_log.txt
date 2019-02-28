@@ -1,0 +1,202 @@
+Dec 06, 2018 8:47:02 AM com.ack.FriendlyPingServer <init>
+WARNING: Inside FriendlyPingServer
+Dec 06, 2018 8:47:02 AM com.ack.SmackCcsClient$1 connected
+INFO: Connected to CCS
+Dec 06, 2018 8:47:02 AM com.ack.SmackCcsClient$1 authenticated
+INFO: Authenticated with CCS
+Dec 06, 2018 8:47:02 AM com.ack.SmackCcsClient listen
+INFO: Listening for incoming XMPP Stanzas...
+Dec 06, 2018 8:47:02 AM com.ack.FriendlyPingServer$FriendlyGcmServer <init>
+INFO: Inside FriendlyGcmServer
+2018-12-06 08:47:03,043 [DEBUG] DaoManager created dao for class class com.ack.User with reflection
+2018-12-06 08:47:03,045 [DEBUG] DaoManager created dao for class class com.ack.UserConnections with reflection
+2018-12-06 08:47:03,047 [INFO] TableUtils creating table 'users_trackbook_ac'
+2018-12-06 08:47:03,047 [INFO] TableUtils creating index 'users_trackbook_ac_gcm_id_idx' for table 'users_trackbook_ac
+2018-12-06 08:47:03,047 [INFO] TableUtils creating index 'users_trackbook_ac_name_idx' for table 'users_trackbook_ac
+2018-12-06 08:47:03,050 [WARNING] VersionUtils Mismatched versions: core is 'VERSION__4.48__', while jdbc is 'VERSION__4.46__'
+2018-12-06 08:47:03,158 [DEBUG] JdbcConnectionSource opened connection to jdbc:sqlite:trackgcmNew.db got #949767857
+2018-12-06 08:47:03,161 [INFO] TableUtils executed create table statement changed 0 rows: CREATE TABLE IF NOT EXISTS `users_trackbook_ac` (`phone` VARCHAR , `name` VARCHAR , `gcm_id` VARCHAR , PRIMARY KEY (`phone`) ) 
+2018-12-06 08:47:03,161 [INFO] TableUtils executed create table statement changed 0 rows: CREATE INDEX IF NOT EXISTS `users_trackbook_ac_gcm_id_idx` ON `users_trackbook_ac` ( `gcm_id` )
+2018-12-06 08:47:03,161 [INFO] TableUtils executed create table statement changed 0 rows: CREATE INDEX IF NOT EXISTS `users_trackbook_ac_name_idx` ON `users_trackbook_ac` ( `name` )
+2018-12-06 08:47:03,161 [INFO] TableUtils creating table 'users_trackbook_connections'
+2018-12-06 08:47:03,162 [INFO] TableUtils creating index 'users_trackbook_connections_m_phone_idx' for table 'users_trackbook_connections
+2018-12-06 08:47:03,162 [INFO] TableUtils creating index 'users_trackbook_connections_f_name_idx' for table 'users_trackbook_connections
+2018-12-06 08:47:03,162 [INFO] TableUtils creating index 'users_trackbook_connections_conn_ind_idx' for table 'users_trackbook_connections
+2018-12-06 08:47:03,162 [INFO] TableUtils creating index 'users_trackbook_connections_m_name_idx' for table 'users_trackbook_connections
+2018-12-06 08:47:03,162 [INFO] TableUtils creating index 'users_trackbook_connections_f_phone_idx' for table 'users_trackbook_connections
+2018-12-06 08:47:03,162 [INFO] TableUtils creating index 'users_trackbook_connections_m_gcm_id_idx' for table 'users_trackbook_connections
+2018-12-06 08:47:03,162 [INFO] TableUtils creating index 'users_trackbook_connections_f_gcm_id_idx' for table 'users_trackbook_connections
+2018-12-06 08:47:03,162 [INFO] TableUtils executed create table statement changed 0 rows: CREATE TABLE IF NOT EXISTS `users_trackbook_connections` (`id` INTEGER PRIMARY KEY AUTOINCREMENT , `m_phone` VARCHAR , `m_name` VARCHAR , `m_gcm_id` VARCHAR , `f_gcm_id` VARCHAR , `f_name` VARCHAR , `f_phone` VARCHAR , `conn_ind` VARCHAR ) 
+2018-12-06 08:47:03,163 [INFO] TableUtils executed create table statement changed 0 rows: CREATE INDEX IF NOT EXISTS `users_trackbook_connections_m_phone_idx` ON `users_trackbook_connections` ( `m_phone` )
+2018-12-06 08:47:03,163 [INFO] TableUtils executed create table statement changed 0 rows: CREATE INDEX IF NOT EXISTS `users_trackbook_connections_f_name_idx` ON `users_trackbook_connections` ( `f_name` )
+2018-12-06 08:47:03,163 [INFO] TableUtils executed create table statement changed 0 rows: CREATE INDEX IF NOT EXISTS `users_trackbook_connections_conn_ind_idx` ON `users_trackbook_connections` ( `conn_ind` )
+2018-12-06 08:47:03,163 [INFO] TableUtils executed create table statement changed 0 rows: CREATE INDEX IF NOT EXISTS `users_trackbook_connections_m_name_idx` ON `users_trackbook_connections` ( `m_name` )
+2018-12-06 08:47:03,163 [INFO] TableUtils executed create table statement changed 0 rows: CREATE INDEX IF NOT EXISTS `users_trackbook_connections_f_phone_idx` ON `users_trackbook_connections` ( `f_phone` )
+2018-12-06 08:47:03,163 [INFO] TableUtils executed create table statement changed 0 rows: CREATE INDEX IF NOT EXISTS `users_trackbook_connections_m_gcm_id_idx` ON `users_trackbook_connections` ( `m_gcm_id` )
+2018-12-06 08:47:03,163 [INFO] TableUtils executed create table statement changed 0 rows: CREATE INDEX IF NOT EXISTS `users_trackbook_connections_f_gcm_id_idx` ON `users_trackbook_connections` ( `f_gcm_id` )
+Dec 06, 2018 8:50:51 AM com.ack.FriendlyPingServer$FriendlyGcmServer onMessage
+INFO: Received message: {"profile_Name":"tester","profile_picture_url":"http://placekitten.com/g/500/500","action":"register_new_client","connection_Status":"NA","registration_token":"df29q8X3ZTU:APA91bEfF5MUxKqRxofQYru2GeB1tC0PIFBdo9cQnA_ZvBiVxT465Y6i2ywsKQHgJkVXiVuYxF7QUe0wqBt1p1BTvk_gggkK6Vvfo3kiJSPC8Rwu8VDlo1ewPZACZbz6zVdNNGG_5jXQ","profile_Phone":"9619218310"}
+2018-12-06 08:50:51,282 [DEBUG] StatementBuilder built statement SELECT * FROM `users_trackbook_ac` 
+2018-12-06 08:50:51,285 [DEBUG] BaseMappedStatement prepared statement 'SELECT * FROM `users_trackbook_ac` ' with 0 args
+2018-12-06 08:50:51,287 [DEBUG] SelectIterator starting iterator @1417526839 for 'SELECT * FROM `users_trackbook_ac` '
+2018-12-06 08:50:51,289 [DEBUG] SelectIterator closed iterator @1417526839 after 16 rows
+2018-12-06 08:50:51,289 [DEBUG] StatementExecutor query of 'SELECT * FROM `users_trackbook_ac` ' returned 16 results
+Dec 06, 2018 8:50:51 AM com.ack.FriendlyPingServer isOld
+INFO: New Client 9820303316
+Dec 06, 2018 8:50:51 AM com.ack.FriendlyPingServer isOld
+INFO: New Client 9223303345
+Dec 06, 2018 8:50:51 AM com.ack.FriendlyPingServer isOld
+INFO: New Client 9811505233
+Dec 06, 2018 8:50:51 AM com.ack.FriendlyPingServer isOld
+INFO: New Client 9166998362
+Dec 06, 2018 8:50:51 AM com.ack.FriendlyPingServer isOld
+INFO: New Client 9920470961
+Dec 06, 2018 8:50:51 AM com.ack.FriendlyPingServer isOld
+INFO: New Client 9930220890
+Dec 06, 2018 8:50:51 AM com.ack.FriendlyPingServer isOld
+INFO: New Client 9969381918
+Dec 06, 2018 8:50:51 AM com.ack.FriendlyPingServer isOld
+INFO: New Client 9892897707
+Dec 06, 2018 8:50:51 AM com.ack.FriendlyPingServer isOld
+INFO: New Client 6909164594
+Dec 06, 2018 8:50:51 AM com.ack.FriendlyPingServer isOld
+INFO: New Client 6945268161
+Dec 06, 2018 8:50:51 AM com.ack.FriendlyPingServer isOld
+INFO: New Client 07840116324
+Dec 06, 2018 8:50:51 AM com.ack.FriendlyPingServer isOld
+INFO: New Client 7193596629
+Dec 06, 2018 8:50:51 AM com.ack.FriendlyPingServer isOld
+INFO: New Client 7024191610
+Dec 06, 2018 8:50:51 AM com.ack.FriendlyPingServer isOld
+INFO: New Client +15145810764
+Dec 06, 2018 8:50:51 AM com.ack.FriendlyPingServer isOld
+INFO: New Client 9166589971
+Dec 06, 2018 8:50:51 AM com.ack.FriendlyPingServer isOld
+INFO: New Client 0096171818813
+2018-12-06 08:50:51,299 [DEBUG] BaseMappedStatement prepared statement 'SELECT * FROM `users_trackbook_ac` ' with 0 args
+2018-12-06 08:50:51,299 [DEBUG] SelectIterator starting iterator @1678798054 for 'SELECT * FROM `users_trackbook_ac` '
+2018-12-06 08:50:51,300 [DEBUG] SelectIterator closed iterator @1678798054 after 16 rows
+2018-12-06 08:50:51,300 [DEBUG] StatementExecutor query of 'SELECT * FROM `users_trackbook_ac` ' returned 16 results
+Dec 06, 2018 8:50:51 AM com.ack.FriendlyPingServer broadcastNewClient
+INFO: Sending New connection Broadcast to ALL registered users9820303316
+Dec 06, 2018 8:50:51 AM com.ack.GcmServer send
+INFO: sending msg: <message><gcm xmlns="google:mobile:data">{"data":{"action":"broadcast_new_client","client":{"registration_token":"df29q8X3ZTU:APA91bEfF5MUxKqRxofQYru2GeB1tC0PIFBdo9cQnA_ZvBiVxT465Y6i2ywsKQHgJkVXiVuYxF7QUe0wqBt1p1BTvk_gggkK6Vvfo3kiJSPC8Rwu8VDlo1ewPZACZbz6zVdNNGG_5jXQ","profile_picture_url":"http://placekitten.com/g/500/500","profile_Name":"tester","profile_Phone":"9619218310","connection_Status":"NA"}},"to":"dN_MkMdIidg:APA91bFv9fab_Ez2gIPIu_65DH26uSfI3C4vLA1zaYV5R3w-rZ9hJYorzsuC_055hP_4gf2HAoUz2Iv_0IQo0W3dqZ2wjqj1fpgsOsJbm33sxmJZ6e-OP3NXySMMtKhCzCM_tukWLAS3","message_id":"1544104251301"}</gcm></message>
+Dec 06, 2018 8:50:51 AM com.ack.FriendlyPingServer broadcastNewClient
+INFO: Sending New connection Broadcast to ALL registered users9223303345
+Dec 06, 2018 8:50:51 AM com.ack.GcmServer send
+INFO: sending msg: <message><gcm xmlns="google:mobile:data">{"data":{"action":"broadcast_new_client","client":{"registration_token":"df29q8X3ZTU:APA91bEfF5MUxKqRxofQYru2GeB1tC0PIFBdo9cQnA_ZvBiVxT465Y6i2ywsKQHgJkVXiVuYxF7QUe0wqBt1p1BTvk_gggkK6Vvfo3kiJSPC8Rwu8VDlo1ewPZACZbz6zVdNNGG_5jXQ","profile_picture_url":"http://placekitten.com/g/500/500","profile_Name":"tester","profile_Phone":"9619218310","connection_Status":"NA"}},"to":"eH3uDP3r4Ag:APA91bEDxt5ED5U4GFQ4Im6d8_5-4xfraAZIF_tnacuMFx_HUdJF6JzkIpWWbh4BybOBxQtT1z5r6uHI90Ih7e5bdv_Y8SJrBMtnvrjLtufw9ObcQBA1-Qv_N5ITdUaJUMO1-lqDcli4","message_id":"1544104251310"}</gcm></message>
+Dec 06, 2018 8:50:51 AM com.ack.FriendlyPingServer broadcastNewClient
+INFO: Sending New connection Broadcast to ALL registered users9811505233
+Dec 06, 2018 8:50:51 AM com.ack.GcmServer send
+INFO: sending msg: <message><gcm xmlns="google:mobile:data">{"data":{"action":"broadcast_new_client","client":{"registration_token":"df29q8X3ZTU:APA91bEfF5MUxKqRxofQYru2GeB1tC0PIFBdo9cQnA_ZvBiVxT465Y6i2ywsKQHgJkVXiVuYxF7QUe0wqBt1p1BTvk_gggkK6Vvfo3kiJSPC8Rwu8VDlo1ewPZACZbz6zVdNNGG_5jXQ","profile_picture_url":"http://placekitten.com/g/500/500","profile_Name":"tester","profile_Phone":"9619218310","connection_Status":"NA"}},"to":"fh012i7Q8DQ:APA91bF7D9u506SwiXqkYf8iYbzSUcDk1wtiqxgZiqEx5vt3L8KV-toQ3Ftnzec51AYTXidZ-nPBHmzGBZMofXYgpP78SEV5S4X1JU1rYh6-EnrnaJyRX_hmhIYFHLgSsxzpLzOE2Rd7","message_id":"1544104251311"}</gcm></message>
+Dec 06, 2018 8:50:51 AM com.ack.FriendlyPingServer broadcastNewClient
+INFO: Sending New connection Broadcast to ALL registered users9166998362
+Dec 06, 2018 8:50:51 AM com.ack.GcmServer send
+INFO: sending msg: <message><gcm xmlns="google:mobile:data">{"data":{"action":"broadcast_new_client","client":{"registration_token":"df29q8X3ZTU:APA91bEfF5MUxKqRxofQYru2GeB1tC0PIFBdo9cQnA_ZvBiVxT465Y6i2ywsKQHgJkVXiVuYxF7QUe0wqBt1p1BTvk_gggkK6Vvfo3kiJSPC8Rwu8VDlo1ewPZACZbz6zVdNNGG_5jXQ","profile_picture_url":"http://placekitten.com/g/500/500","profile_Name":"tester","profile_Phone":"9619218310","connection_Status":"NA"}},"to":"e4pPflfXIUg:APA91bFkQLKfrow0BcLQhhCYtq5t6XjQNzyG81wbptlO_f9NdaYv7Z3nTszQFkc-q5OYfuhhnpRYLRxsNvCc5m54cW3-ahR8NtYEnRwczJeLR8rGX9n6yowYbS1bC3ZCyjncwKhCu-es","message_id":"1544104251312"}</gcm></message>
+Dec 06, 2018 8:50:51 AM com.ack.FriendlyPingServer broadcastNewClient
+INFO: Sending New connection Broadcast to ALL registered users9920470961
+Dec 06, 2018 8:50:51 AM com.ack.GcmServer send
+INFO: sending msg: <message><gcm xmlns="google:mobile:data">{"data":{"action":"broadcast_new_client","client":{"registration_token":"df29q8X3ZTU:APA91bEfF5MUxKqRxofQYru2GeB1tC0PIFBdo9cQnA_ZvBiVxT465Y6i2ywsKQHgJkVXiVuYxF7QUe0wqBt1p1BTvk_gggkK6Vvfo3kiJSPC8Rwu8VDlo1ewPZACZbz6zVdNNGG_5jXQ","profile_picture_url":"http://placekitten.com/g/500/500","profile_Name":"tester","profile_Phone":"9619218310","connection_Status":"NA"}},"to":"cojl3RUdhkg:APA91bGMi_iDxmk0JaK-8D38UcXAKm5L-BwTHOK0efVsqzX_p7DUWMRZwFMHVouMoTRS6LSAuQ8ClcrONK9CYhFZSOmF2TJFdGijjNimoEz2O70nks8UmhwKtdc-lq5Nz_bt_P2apjfa","message_id":"1544104251314"}</gcm></message>
+Dec 06, 2018 8:50:51 AM com.ack.FriendlyPingServer broadcastNewClient
+INFO: Sending New connection Broadcast to ALL registered users9930220890
+Dec 06, 2018 8:50:51 AM com.ack.GcmServer send
+INFO: sending msg: <message><gcm xmlns="google:mobile:data">{"data":{"action":"broadcast_new_client","client":{"registration_token":"df29q8X3ZTU:APA91bEfF5MUxKqRxofQYru2GeB1tC0PIFBdo9cQnA_ZvBiVxT465Y6i2ywsKQHgJkVXiVuYxF7QUe0wqBt1p1BTvk_gggkK6Vvfo3kiJSPC8Rwu8VDlo1ewPZACZbz6zVdNNGG_5jXQ","profile_picture_url":"http://placekitten.com/g/500/500","profile_Name":"tester","profile_Phone":"9619218310","connection_Status":"NA"}},"to":"f9rnYQvY6HE:APA91bEnOf7vC0HeuKDY7aEZSTVkyC_H9CYWufYKqG_LJmJdyeCKaC5LBsNzqmkyIcwSaf8QxWljc_nX12V748oSOsVpYJPOQaem_MhHuAOitMgCWiOb3tlh9wZQt7c-eYee7kg4QCnW","message_id":"1544104251315"}</gcm></message>
+Dec 06, 2018 8:50:51 AM com.ack.FriendlyPingServer broadcastNewClient
+INFO: Sending New connection Broadcast to ALL registered users9969381918
+Dec 06, 2018 8:50:51 AM com.ack.GcmServer send
+INFO: sending msg: <message><gcm xmlns="google:mobile:data">{"data":{"action":"broadcast_new_client","client":{"registration_token":"df29q8X3ZTU:APA91bEfF5MUxKqRxofQYru2GeB1tC0PIFBdo9cQnA_ZvBiVxT465Y6i2ywsKQHgJkVXiVuYxF7QUe0wqBt1p1BTvk_gggkK6Vvfo3kiJSPC8Rwu8VDlo1ewPZACZbz6zVdNNGG_5jXQ","profile_picture_url":"http://placekitten.com/g/500/500","profile_Name":"tester","profile_Phone":"9619218310","connection_Status":"NA"}},"to":"e-i_2ztEkdY:APA91bFr8lHJ3KgWixUUiCBuO_9OCU270r68cwn_0lMuWD_6dIl06U_MHbSNHLau-aOtJEyxeeBsP6XeXMa8PT9GoV4X802_hm_OKwxAC1ogsUapX7EHsV0f612Gsnw97TSaEU3oewbh","message_id":"1544104251316"}</gcm></message>
+Dec 06, 2018 8:50:51 AM com.ack.FriendlyPingServer broadcastNewClient
+INFO: Sending New connection Broadcast to ALL registered users9892897707
+Dec 06, 2018 8:50:51 AM com.ack.GcmServer send
+INFO: sending msg: <message><gcm xmlns="google:mobile:data">{"data":{"action":"broadcast_new_client","client":{"registration_token":"df29q8X3ZTU:APA91bEfF5MUxKqRxofQYru2GeB1tC0PIFBdo9cQnA_ZvBiVxT465Y6i2ywsKQHgJkVXiVuYxF7QUe0wqBt1p1BTvk_gggkK6Vvfo3kiJSPC8Rwu8VDlo1ewPZACZbz6zVdNNGG_5jXQ","profile_picture_url":"http://placekitten.com/g/500/500","profile_Name":"tester","profile_Phone":"9619218310","connection_Status":"NA"}},"to":"deR0LLFtHfI:APA91bGN15qzi4Gh5KoE7yrQf1iQLGXA-MVH0Ro6neJoTpLf-OxAcSbZE4DHG8moLSjvNjYuj_P-EGpFWSAHJcXOFrQXNa2Sb8I8zy7MoBfcEmBM-DklJ3qwTzfaxMfT6h2QGZAtuToI","message_id":"1544104251317"}</gcm></message>
+Dec 06, 2018 8:50:51 AM com.ack.FriendlyPingServer broadcastNewClient
+INFO: Sending New connection Broadcast to ALL registered users6909164594
+Dec 06, 2018 8:50:51 AM com.ack.GcmServer send
+INFO: sending msg: <message><gcm xmlns="google:mobile:data">{"data":{"action":"broadcast_new_client","client":{"registration_token":"df29q8X3ZTU:APA91bEfF5MUxKqRxofQYru2GeB1tC0PIFBdo9cQnA_ZvBiVxT465Y6i2ywsKQHgJkVXiVuYxF7QUe0wqBt1p1BTvk_gggkK6Vvfo3kiJSPC8Rwu8VDlo1ewPZACZbz6zVdNNGG_5jXQ","profile_picture_url":"http://placekitten.com/g/500/500","profile_Name":"tester","profile_Phone":"9619218310","connection_Status":"NA"}},"to":"fvY0_4lUY9o:APA91bEr8Bl8yETZZwYrQpNbTzuVilaRu7YhvIQv1ogfFnzyppzde6C7OtXhTZaYxIHgOxCJmtmHOYbuyn2derifGAEgq7X-rkRnx9c-c3TJO38R9SBHctZ1q2couFJMinNMTieRc5B8","message_id":"1544104251318"}</gcm></message>
+Dec 06, 2018 8:50:51 AM com.ack.FriendlyPingServer broadcastNewClient
+INFO: Sending New connection Broadcast to ALL registered users6945268161
+Dec 06, 2018 8:50:51 AM com.ack.GcmServer send
+INFO: sending msg: <message><gcm xmlns="google:mobile:data">{"data":{"action":"broadcast_new_client","client":{"registration_token":"df29q8X3ZTU:APA91bEfF5MUxKqRxofQYru2GeB1tC0PIFBdo9cQnA_ZvBiVxT465Y6i2ywsKQHgJkVXiVuYxF7QUe0wqBt1p1BTvk_gggkK6Vvfo3kiJSPC8Rwu8VDlo1ewPZACZbz6zVdNNGG_5jXQ","profile_picture_url":"http://placekitten.com/g/500/500","profile_Name":"tester","profile_Phone":"9619218310","connection_Status":"NA"}},"to":"e3mmJxzCCq8:APA91bFdG17-eIOO_uF_W0E0Kq6URcqmDZnG0JFDY45coFMnBQBHo2kB59XHXu92_VzZ8zQrWGIRaI_N82mE7jMMAia8hZ6O8PMtfrkQH6Pthojz593kmPW9c5_-qaaXjlegrORq744M","message_id":"1544104251319"}</gcm></message>
+Dec 06, 2018 8:50:51 AM com.ack.FriendlyPingServer broadcastNewClient
+INFO: Sending New connection Broadcast to ALL registered users07840116324
+Dec 06, 2018 8:50:51 AM com.ack.GcmServer send
+INFO: sending msg: <message><gcm xmlns="google:mobile:data">{"data":{"action":"broadcast_new_client","client":{"registration_token":"df29q8X3ZTU:APA91bEfF5MUxKqRxofQYru2GeB1tC0PIFBdo9cQnA_ZvBiVxT465Y6i2ywsKQHgJkVXiVuYxF7QUe0wqBt1p1BTvk_gggkK6Vvfo3kiJSPC8Rwu8VDlo1ewPZACZbz6zVdNNGG_5jXQ","profile_picture_url":"http://placekitten.com/g/500/500","profile_Name":"tester","profile_Phone":"9619218310","connection_Status":"NA"}},"to":"cDlBaCKU3fo:APA91bEZ_Dsisyx-TRPVmdNs8lHt2j1fM5R_43Lv7Sw2_W_KP4KhNpSzZ_vKAS-s8lCWRQQluPvkX7OJ-jQziFhV4oGeJDKpdCNpGo4DX3turyySb4TdhpmkVubOXdpXXWuj7WlsWKnq","message_id":"1544104251320"}</gcm></message>
+Dec 06, 2018 8:50:51 AM com.ack.FriendlyPingServer broadcastNewClient
+INFO: Sending New connection Broadcast to ALL registered users7193596629
+Dec 06, 2018 8:50:51 AM com.ack.GcmServer send
+INFO: sending msg: <message><gcm xmlns="google:mobile:data">{"data":{"action":"broadcast_new_client","client":{"registration_token":"df29q8X3ZTU:APA91bEfF5MUxKqRxofQYru2GeB1tC0PIFBdo9cQnA_ZvBiVxT465Y6i2ywsKQHgJkVXiVuYxF7QUe0wqBt1p1BTvk_gggkK6Vvfo3kiJSPC8Rwu8VDlo1ewPZACZbz6zVdNNGG_5jXQ","profile_picture_url":"http://placekitten.com/g/500/500","profile_Name":"tester","profile_Phone":"9619218310","connection_Status":"NA"}},"to":"dOGDLeIvrKc:APA91bGN0KRQkKfbIecPKHkh_ZscDaazK5RyaK2lhqlPdRTSKXC1qCHN4dD2xXT54PupVxasjYon1WZkXpSzoedviRlgVYvgl_nTTML9QdcxdPLVUgkDgNkYqLWzWXSU26HpFWY4CWiy","message_id":"1544104251321"}</gcm></message>
+Dec 06, 2018 8:50:51 AM com.ack.FriendlyPingServer broadcastNewClient
+INFO: Sending New connection Broadcast to ALL registered users7024191610
+Dec 06, 2018 8:50:51 AM com.ack.GcmServer send
+INFO: sending msg: <message><gcm xmlns="google:mobile:data">{"data":{"action":"broadcast_new_client","client":{"registration_token":"df29q8X3ZTU:APA91bEfF5MUxKqRxofQYru2GeB1tC0PIFBdo9cQnA_ZvBiVxT465Y6i2ywsKQHgJkVXiVuYxF7QUe0wqBt1p1BTvk_gggkK6Vvfo3kiJSPC8Rwu8VDlo1ewPZACZbz6zVdNNGG_5jXQ","profile_picture_url":"http://placekitten.com/g/500/500","profile_Name":"tester","profile_Phone":"9619218310","connection_Status":"NA"}},"to":"fzfLGduPYRI:APA91bFzRTvykL2MDEyvCV174j3-uyrEXRVEKvp52crJo2ix3c8KU-8jzUJ1HtWqNzdC-shUvDjAgTqw5-6MZpMhIqd_Fst1UV58mQre9mt-7gyKxV91UXJgb6CZ05LbRqJe83DlSC0A","message_id":"1544104251322"}</gcm></message>
+Dec 06, 2018 8:50:51 AM com.ack.FriendlyPingServer broadcastNewClient
+INFO: Sending New connection Broadcast to ALL registered users+15145810764
+Dec 06, 2018 8:50:51 AM com.ack.GcmServer send
+INFO: sending msg: <message><gcm xmlns="google:mobile:data">{"data":{"action":"broadcast_new_client","client":{"registration_token":"df29q8X3ZTU:APA91bEfF5MUxKqRxofQYru2GeB1tC0PIFBdo9cQnA_ZvBiVxT465Y6i2ywsKQHgJkVXiVuYxF7QUe0wqBt1p1BTvk_gggkK6Vvfo3kiJSPC8Rwu8VDlo1ewPZACZbz6zVdNNGG_5jXQ","profile_picture_url":"http://placekitten.com/g/500/500","profile_Name":"tester","profile_Phone":"9619218310","connection_Status":"NA"}},"to":"fMB6pNR9Hlo:APA91bFPa2mDjlGRt0YLYSuE3uf8-yTGjoVSZLNl8bI3F0V9R083i3kLEwMv4RXUKwirHP35U3pR4DWjYniaeeKBPNj-QefBjZFoXmdKCUAzFdlks7URsjvpZUcnfszdkuu7b9A-Yq5a","message_id":"1544104251323"}</gcm></message>
+Dec 06, 2018 8:50:51 AM com.ack.FriendlyPingServer broadcastNewClient
+INFO: Sending New connection Broadcast to ALL registered users9166589971
+Dec 06, 2018 8:50:51 AM com.ack.GcmServer send
+INFO: sending msg: <message><gcm xmlns="google:mobile:data">{"data":{"action":"broadcast_new_client","client":{"registration_token":"df29q8X3ZTU:APA91bEfF5MUxKqRxofQYru2GeB1tC0PIFBdo9cQnA_ZvBiVxT465Y6i2ywsKQHgJkVXiVuYxF7QUe0wqBt1p1BTvk_gggkK6Vvfo3kiJSPC8Rwu8VDlo1ewPZACZbz6zVdNNGG_5jXQ","profile_picture_url":"http://placekitten.com/g/500/500","profile_Name":"tester","profile_Phone":"9619218310","connection_Status":"NA"}},"to":"cKRQCYovM0k:APA91bH0_ayf3yeYLlsoonSFFVfTKkElXLibE4_6BEE13a54i4wrfES3BQTj6v8ka3LivpcFgb-0P1emmFqHKmSrnAPvCmhCgztQez4GFPi8ZDpN9ALzeME280-lm9qi-cXglqDK6dlP","message_id":"1544104251324"}</gcm></message>
+Dec 06, 2018 8:50:51 AM com.ack.FriendlyPingServer broadcastNewClient
+INFO: Sending New connection Broadcast to ALL registered users0096171818813
+Dec 06, 2018 8:50:51 AM com.ack.GcmServer send
+INFO: sending msg: <message><gcm xmlns="google:mobile:data">{"data":{"action":"broadcast_new_client","client":{"registration_token":"df29q8X3ZTU:APA91bEfF5MUxKqRxofQYru2GeB1tC0PIFBdo9cQnA_ZvBiVxT465Y6i2ywsKQHgJkVXiVuYxF7QUe0wqBt1p1BTvk_gggkK6Vvfo3kiJSPC8Rwu8VDlo1ewPZACZbz6zVdNNGG_5jXQ","profile_picture_url":"http://placekitten.com/g/500/500","profile_Name":"tester","profile_Phone":"9619218310","connection_Status":"NA"}},"to":"eKdQFbIK3e8:APA91bGdmBcTYw_Hf9xYfJuosFB8bPIgSCuj94GGiHFg6ZnpZzbzR6VWRfruwHMcuFMB_8siorC5yW00ewgUE7yj35cdyLlOxBmDclimz3xai7hV9kvroDLjrjIe1Clr0Y5g28JX3OJD","message_id":"1544104251325"}</gcm></message>
+2018-12-06 08:50:51,326 [DEBUG] BaseMappedStatement prepared statement 'SELECT * FROM `users_trackbook_ac` ' with 0 args
+2018-12-06 08:50:51,326 [DEBUG] SelectIterator starting iterator @358185963 for 'SELECT * FROM `users_trackbook_ac` '
+2018-12-06 08:50:51,326 [DEBUG] SelectIterator closed iterator @358185963 after 16 rows
+2018-12-06 08:50:51,326 [DEBUG] StatementExecutor query of 'SELECT * FROM `users_trackbook_ac` ' returned 16 results
+2018-12-06 08:50:51,327 [DEBUG] StatementExecutor query of 'SELECT COUNT(*) FROM `users_trackbook_ac`' returned 16
+Dec 06, 2018 8:50:51 AM com.ack.FriendlyPingServer sendClientList_new
+INFO: Sending 10 connection list
+Dec 06, 2018 8:50:51 AM com.ack.GcmServer send
+INFO: sending msg: <message><gcm xmlns="google:mobile:data">{"data":{"action":"send_client_list","clients":[{"registration_token":"dN_MkMdIidg:APA91bFv9fab_Ez2gIPIu_65DH26uSfI3C4vLA1zaYV5R3w-rZ9hJYorzsuC_055hP_4gf2HAoUz2Iv_0IQo0W3dqZ2wjqj1fpgsOsJbm33sxmJZ6e-OP3NXySMMtKhCzCM_tukWLAS3","profile_picture_url":"NA","profile_Name":"Lucky Goyal","profile_Phone":"9820303316","connection_Status":"NA"},{"registration_token":"eH3uDP3r4Ag:APA91bEDxt5ED5U4GFQ4Im6d8_5-4xfraAZIF_tnacuMFx_HUdJF6JzkIpWWbh4BybOBxQtT1z5r6uHI90Ih7e5bdv_Y8SJrBMtnvrjLtufw9ObcQBA1-Qv_N5ITdUaJUMO1-lqDcli4","profile_picture_url":"NA","profile_Name":"Rinkesh Goyal","profile_Phone":"9223303345","connection_Status":"NA"},{"registration_token":"fh012i7Q8DQ:APA91bF7D9u506SwiXqkYf8iYbzSUcDk1wtiqxgZiqEx5vt3L8KV-toQ3Ftnzec51AYTXidZ-nPBHmzGBZMofXYgpP78SEV5S4X1JU1rYh6-EnrnaJyRX_hmhIYFHLgSsxzpLzOE2Rd7","profile_picture_url":"NA","profile_Name":"ashok Chandra","profile_Phone":"9811505233","connection_Status":"NA"},{"registration_token":"e4pPflfXIUg:APA91bFkQLKfrow0BcLQhhCYtq5t6XjQNzyG81wbptlO_f9NdaYv7Z3nTszQFkc-q5OYfuhhnpRYLRxsNvCc5m54cW3-ahR8NtYEnRwczJeLR8rGX9n6yowYbS1bC3ZCyjncwKhCu-es","profile_picture_url":"NA","profile_Name":"Nidhi goyal","profile_Phone":"9166998362","connection_Status":"NA"},{"registration_token":"cojl3RUdhkg:APA91bGMi_iDxmk0JaK-8D38UcXAKm5L-BwTHOK0efVsqzX_p7DUWMRZwFMHVouMoTRS6LSAuQ8ClcrONK9CYhFZSOmF2TJFdGijjNimoEz2O70nks8UmhwKtdc-lq5Nz_bt_P2apjfa","profile_picture_url":"NA","profile_Name":"surama","profile_Phone":"9920470961","connection_Status":"NA"},{"registration_token":"f9rnYQvY6HE:APA91bEnOf7vC0HeuKDY7aEZSTVkyC_H9CYWufYKqG_LJmJdyeCKaC5LBsNzqmkyIcwSaf8QxWljc_nX12V748oSOsVpYJPOQaem_MhHuAOitMgCWiOb3tlh9wZQt7c-eYee7kg4QCnW","profile_picture_url":"NA","profile_Name":"bhavna Mishra ","profile_Phone":"9930220890","connection_Status":"NA"},{"registration_token":"e-i_2ztEkdY:APA91bFr8lHJ3KgWixUUiCBuO_9OCU270r68cwn_0lMuWD_6dIl06U_MHbSNHLau-aOtJEyxeeBsP6XeXMa8PT9GoV4X802_hm_OKwxAC1ogsUapX7EHsV0f612Gsnw97TSaEU3oewbh","profile_picture_url":"NA","profile_Name":"CRM ","profile_Phone":"9969381918","connection_Status":"NA"},{"registration_token":"deR0LLFtHfI:APA91bGN15qzi4Gh5KoE7yrQf1iQLGXA-MVH0Ro6neJoTpLf-OxAcSbZE4DHG8moLSjvNjYuj_P-EGpFWSAHJcXOFrQXNa2Sb8I8zy7MoBfcEmBM-DklJ3qwTzfaxMfT6h2QGZAtuToI","profile_picture_url":"NA","profile_Name":"Aarohi","profile_Phone":"9892897707","connection_Status":"NA"},{"registration_token":"fvY0_4lUY9o:APA91bEr8Bl8yETZZwYrQpNbTzuVilaRu7YhvIQv1ogfFnzyppzde6C7OtXhTZaYxIHgOxCJmtmHOYbuyn2derifGAEgq7X-rkRnx9c-c3TJO38R9SBHctZ1q2couFJMinNMTieRc5B8","profile_picture_url":"NA","profile_Name":"kostas","profile_Phone":"6909164594","connection_Status":"NA"},{"registration_token":"e3mmJxzCCq8:APA91bFdG17-eIOO_uF_W0E0Kq6URcqmDZnG0JFDY45coFMnBQBHo2kB59XHXu92_VzZ8zQrWGIRaI_N82mE7jMMAia8hZ6O8PMtfrkQH6Pthojz593kmPW9c5_-qaaXjlegrORq744M","profile_picture_url":"NA","profile_Name":"vassilis panagos","profile_Phone":"6945268161","connection_Status":"NA"}]},"to":"df29q8X3ZTU:APA91bEfF5MUxKqRxofQYru2GeB1tC0PIFBdo9cQnA_ZvBiVxT465Y6i2ywsKQHgJkVXiVuYxF7QUe0wqBt1p1BTvk_gggkK6Vvfo3kiJSPC8Rwu8VDlo1ewPZACZbz6zVdNNGG_5jXQ","message_id":"1544104251329"}</gcm></message>
+Dec 06, 2018 8:50:51 AM com.ack.FriendlyPingServer sendClientList_new
+INFO: Sending 10 connection list
+Dec 06, 2018 8:50:51 AM com.ack.GcmServer send
+INFO: sending msg: <message><gcm xmlns="google:mobile:data">{"data":{"action":"send_client_list","clients":[{"registration_token":"dN_MkMdIidg:APA91bFv9fab_Ez2gIPIu_65DH26uSfI3C4vLA1zaYV5R3w-rZ9hJYorzsuC_055hP_4gf2HAoUz2Iv_0IQo0W3dqZ2wjqj1fpgsOsJbm33sxmJZ6e-OP3NXySMMtKhCzCM_tukWLAS3","profile_picture_url":"NA","profile_Name":"Lucky Goyal","profile_Phone":"9820303316","connection_Status":"NA"},{"registration_token":"eH3uDP3r4Ag:APA91bEDxt5ED5U4GFQ4Im6d8_5-4xfraAZIF_tnacuMFx_HUdJF6JzkIpWWbh4BybOBxQtT1z5r6uHI90Ih7e5bdv_Y8SJrBMtnvrjLtufw9ObcQBA1-Qv_N5ITdUaJUMO1-lqDcli4","profile_picture_url":"NA","profile_Name":"Rinkesh Goyal","profile_Phone":"9223303345","connection_Status":"NA"},{"registration_token":"fh012i7Q8DQ:APA91bF7D9u506SwiXqkYf8iYbzSUcDk1wtiqxgZiqEx5vt3L8KV-toQ3Ftnzec51AYTXidZ-nPBHmzGBZMofXYgpP78SEV5S4X1JU1rYh6-EnrnaJyRX_hmhIYFHLgSsxzpLzOE2Rd7","profile_picture_url":"NA","profile_Name":"ashok Chandra","profile_Phone":"9811505233","connection_Status":"NA"},{"registration_token":"e4pPflfXIUg:APA91bFkQLKfrow0BcLQhhCYtq5t6XjQNzyG81wbptlO_f9NdaYv7Z3nTszQFkc-q5OYfuhhnpRYLRxsNvCc5m54cW3-ahR8NtYEnRwczJeLR8rGX9n6yowYbS1bC3ZCyjncwKhCu-es","profile_picture_url":"NA","profile_Name":"Nidhi goyal","profile_Phone":"9166998362","connection_Status":"NA"},{"registration_token":"cojl3RUdhkg:APA91bGMi_iDxmk0JaK-8D38UcXAKm5L-BwTHOK0efVsqzX_p7DUWMRZwFMHVouMoTRS6LSAuQ8ClcrONK9CYhFZSOmF2TJFdGijjNimoEz2O70nks8UmhwKtdc-lq5Nz_bt_P2apjfa","profile_picture_url":"NA","profile_Name":"surama","profile_Phone":"9920470961","connection_Status":"NA"},{"registration_token":"f9rnYQvY6HE:APA91bEnOf7vC0HeuKDY7aEZSTVkyC_H9CYWufYKqG_LJmJdyeCKaC5LBsNzqmkyIcwSaf8QxWljc_nX12V748oSOsVpYJPOQaem_MhHuAOitMgCWiOb3tlh9wZQt7c-eYee7kg4QCnW","profile_picture_url":"NA","profile_Name":"bhavna Mishra ","profile_Phone":"9930220890","connection_Status":"NA"},{"registration_token":"e-i_2ztEkdY:APA91bFr8lHJ3KgWixUUiCBuO_9OCU270r68cwn_0lMuWD_6dIl06U_MHbSNHLau-aOtJEyxeeBsP6XeXMa8PT9GoV4X802_hm_OKwxAC1ogsUapX7EHsV0f612Gsnw97TSaEU3oewbh","profile_picture_url":"NA","profile_Name":"CRM ","profile_Phone":"9969381918","connection_Status":"NA"},{"registration_token":"deR0LLFtHfI:APA91bGN15qzi4Gh5KoE7yrQf1iQLGXA-MVH0Ro6neJoTpLf-OxAcSbZE4DHG8moLSjvNjYuj_P-EGpFWSAHJcXOFrQXNa2Sb8I8zy7MoBfcEmBM-DklJ3qwTzfaxMfT6h2QGZAtuToI","profile_picture_url":"NA","profile_Name":"Aarohi","profile_Phone":"9892897707","connection_Status":"NA"},{"registration_token":"fvY0_4lUY9o:APA91bEr8Bl8yETZZwYrQpNbTzuVilaRu7YhvIQv1ogfFnzyppzde6C7OtXhTZaYxIHgOxCJmtmHOYbuyn2derifGAEgq7X-rkRnx9c-c3TJO38R9SBHctZ1q2couFJMinNMTieRc5B8","profile_picture_url":"NA","profile_Name":"kostas","profile_Phone":"6909164594","connection_Status":"NA"},{"registration_token":"e3mmJxzCCq8:APA91bFdG17-eIOO_uF_W0E0Kq6URcqmDZnG0JFDY45coFMnBQBHo2kB59XHXu92_VzZ8zQrWGIRaI_N82mE7jMMAia8hZ6O8PMtfrkQH6Pthojz593kmPW9c5_-qaaXjlegrORq744M","profile_picture_url":"NA","profile_Name":"vassilis panagos","profile_Phone":"6945268161","connection_Status":"NA"},{"registration_token":"cDlBaCKU3fo:APA91bEZ_Dsisyx-TRPVmdNs8lHt2j1fM5R_43Lv7Sw2_W_KP4KhNpSzZ_vKAS-s8lCWRQQluPvkX7OJ-jQziFhV4oGeJDKpdCNpGo4DX3turyySb4TdhpmkVubOXdpXXWuj7WlsWKnq","profile_picture_url":"NA","profile_Name":"Hayley","profile_Phone":"07840116324","connection_Status":"NA"},{"registration_token":"dOGDLeIvrKc:APA91bGN0KRQkKfbIecPKHkh_ZscDaazK5RyaK2lhqlPdRTSKXC1qCHN4dD2xXT54PupVxasjYon1WZkXpSzoedviRlgVYvgl_nTTML9QdcxdPLVUgkDgNkYqLWzWXSU26HpFWY4CWiy","profile_picture_url":"NA","profile_Name":"Jessica","profile_Phone":"7193596629","connection_Status":"NA"},{"registration_token":"fzfLGduPYRI:APA91bFzRTvykL2MDEyvCV174j3-uyrEXRVEKvp52crJo2ix3c8KU-8jzUJ1HtWqNzdC-shUvDjAgTqw5-6MZpMhIqd_Fst1UV58mQre9mt-7gyKxV91UXJgb6CZ05LbRqJe83DlSC0A","profile_picture_url":"NA","profile_Name":"House phone","profile_Phone":"7024191610","connection_Status":"NA"},{"registration_token":"fMB6pNR9Hlo:APA91bFPa2mDjlGRt0YLYSuE3uf8-yTGjoVSZLNl8bI3F0V9R083i3kLEwMv4RXUKwirHP35U3pR4DWjYniaeeKBPNj-QefBjZFoXmdKCUAzFdlks7URsjvpZUcnfszdkuu7b9A-Yq5a","profile_picture_url":"NA","profile_Name":"Terry","profile_Phone":"+15145810764","connection_Status":"NA"},{"registration_token":"cKRQCYovM0k:APA91bH0_ayf3yeYLlsoonSFFVfTKkElXLibE4_6BEE13a54i4wrfES3BQTj6v8ka3LivpcFgb-0P1emmFqHKmSrnAPvCmhCgztQez4GFPi8ZDpN9ALzeME280-lm9qi-cXglqDK6dlP","profile_picture_url":"NA","profile_Name":"Akshay Raj Goyal","profile_Phone":"9166589971","connection_Status":"NA"},{"registration_token":"eKdQFbIK3e8:APA91bGdmBcTYw_Hf9xYfJuosFB8bPIgSCuj94GGiHFg6ZnpZzbzR6VWRfruwHMcuFMB_8siorC5yW00ewgUE7yj35cdyLlOxBmDclimz3xai7hV9kvroDLjrjIe1Clr0Y5g28JX3OJD","profile_picture_url":"NA","profile_Name":"Manar","profile_Phone":"0096171818813","connection_Status":"NA"}]},"to":"df29q8X3ZTU:APA91bEfF5MUxKqRxofQYru2GeB1tC0PIFBdo9cQnA_ZvBiVxT465Y6i2ywsKQHgJkVXiVuYxF7QUe0wqBt1p1BTvk_gggkK6Vvfo3kiJSPC8Rwu8VDlo1ewPZACZbz6zVdNNGG_5jXQ","message_id":"1544104251331"}</gcm></message>
+Dec 06, 2018 8:50:51 AM com.ack.FriendlyPingServer addUser
+INFO: Adding new user: tester:df29q8X3ZTU:APA91bEfF5MUxKqRxofQYru2GeB1tC0PIFBdo9cQnA_ZvBiVxT465Y6i2ywsKQHgJkVXiVuYxF7QUe0wqBt1p1BTvk_gggkK6Vvfo3kiJSPC8Rwu8VDlo1ewPZACZbz6zVdNNGG_5jXQ
+2018-12-06 08:50:51,342 [DEBUG] BaseMappedStatement query-for-id using 'SELECT * FROM `users_trackbook_ac` WHERE `phone` = ?' and 1 args, got no results
+2018-12-06 08:50:51,347 [DEBUG] BaseMappedStatement insert data with statement 'INSERT INTO `users_trackbook_ac` (`phone` ,`name` ,`gcm_id` ) VALUES (?,?,?)' and 3 args, changed 1 rows
+Dec 06, 2018 8:50:51 AM com.ack.GcmServer sendAck
+INFO: sending ack: <message><gcm xmlns="google:mobile:data">{
+  "to": "df29q8X3ZTU:APA91bEfF5MUxKqRxofQYru2GeB1tC0PIFBdo9cQnA_ZvBiVxT465Y6i2ywsKQHgJkVXiVuYxF7QUe0wqBt1p1BTvk_gggkK6Vvfo3kiJSPC8Rwu8VDlo1ewPZACZbz6zVdNNGG_5jXQ",
+  "message_id": "1",
+  "message_type": "ack"
+}</gcm></message>
+Dec 06, 2018 8:50:51 AM com.ack.GcmServer$3 processPacket
+INFO: NACK received for message 1544104251316 from e-i_2ztEkdY:APA91bFr8lHJ3KgWixUUiCBuO_9OCU270r68cwn_0lMuWD_6dIl06U_MHbSNHLau-aOtJEyxeeBsP6XeXMa8PT9GoV4X802_hm_OKwxAC1ogsUapX7EHsV0f612Gsnw97TSaEU3oewbh
+Dec 06, 2018 8:50:51 AM com.ack.GcmServer$3 processPacket
+INFO: NACK received for message 1544104251319 from e3mmJxzCCq8:APA91bFdG17-eIOO_uF_W0E0Kq6URcqmDZnG0JFDY45coFMnBQBHo2kB59XHXu92_VzZ8zQrWGIRaI_N82mE7jMMAia8hZ6O8PMtfrkQH6Pthojz593kmPW9c5_-qaaXjlegrORq744M
+Dec 06, 2018 8:50:51 AM com.ack.GcmServer$3 processPacket
+INFO: ACK received for message 1544104251301 from dN_MkMdIidg:APA91bFv9fab_Ez2gIPIu_65DH26uSfI3C4vLA1zaYV5R3w-rZ9hJYorzsuC_055hP_4gf2HAoUz2Iv_0IQo0W3dqZ2wjqj1fpgsOsJbm33sxmJZ6e-OP3NXySMMtKhCzCM_tukWLAS3
+Dec 06, 2018 8:50:51 AM com.ack.GcmServer$3 processPacket
+INFO: NACK received for message 1544104251321 from dOGDLeIvrKc:APA91bGN0KRQkKfbIecPKHkh_ZscDaazK5RyaK2lhqlPdRTSKXC1qCHN4dD2xXT54PupVxasjYon1WZkXpSzoedviRlgVYvgl_nTTML9QdcxdPLVUgkDgNkYqLWzWXSU26HpFWY4CWiy
+Dec 06, 2018 8:50:51 AM com.ack.GcmServer$3 processPacket
+INFO: NACK received for message 1544104251318 from fvY0_4lUY9o:APA91bEr8Bl8yETZZwYrQpNbTzuVilaRu7YhvIQv1ogfFnzyppzde6C7OtXhTZaYxIHgOxCJmtmHOYbuyn2derifGAEgq7X-rkRnx9c-c3TJO38R9SBHctZ1q2couFJMinNMTieRc5B8
+Dec 06, 2018 8:50:51 AM com.ack.GcmServer$3 processPacket
+INFO: NACK received for message 1544104251320 from cDlBaCKU3fo:APA91bEZ_Dsisyx-TRPVmdNs8lHt2j1fM5R_43Lv7Sw2_W_KP4KhNpSzZ_vKAS-s8lCWRQQluPvkX7OJ-jQziFhV4oGeJDKpdCNpGo4DX3turyySb4TdhpmkVubOXdpXXWuj7WlsWKnq
+Dec 06, 2018 8:50:51 AM com.ack.GcmServer$3 processPacket
+INFO: ACK received for message 1544104251324 from cKRQCYovM0k:APA91bH0_ayf3yeYLlsoonSFFVfTKkElXLibE4_6BEE13a54i4wrfES3BQTj6v8ka3LivpcFgb-0P1emmFqHKmSrnAPvCmhCgztQez4GFPi8ZDpN9ALzeME280-lm9qi-cXglqDK6dlP
+Dec 06, 2018 8:50:51 AM com.ack.GcmServer$3 processPacket
+INFO: NACK received for message 1544104251322 from fzfLGduPYRI:APA91bFzRTvykL2MDEyvCV174j3-uyrEXRVEKvp52crJo2ix3c8KU-8jzUJ1HtWqNzdC-shUvDjAgTqw5-6MZpMhIqd_Fst1UV58mQre9mt-7gyKxV91UXJgb6CZ05LbRqJe83DlSC0A
+Dec 06, 2018 8:50:51 AM com.ack.GcmServer$3 processPacket
+INFO: ACK received for message 1544104251310 from eH3uDP3r4Ag:APA91bEDxt5ED5U4GFQ4Im6d8_5-4xfraAZIF_tnacuMFx_HUdJF6JzkIpWWbh4BybOBxQtT1z5r6uHI90Ih7e5bdv_Y8SJrBMtnvrjLtufw9ObcQBA1-Qv_N5ITdUaJUMO1-lqDcli4
+Dec 06, 2018 8:50:51 AM com.ack.GcmServer$3 processPacket
+INFO: NACK received for message 1544104251323 from fMB6pNR9Hlo:APA91bFPa2mDjlGRt0YLYSuE3uf8-yTGjoVSZLNl8bI3F0V9R083i3kLEwMv4RXUKwirHP35U3pR4DWjYniaeeKBPNj-QefBjZFoXmdKCUAzFdlks7URsjvpZUcnfszdkuu7b9A-Yq5a
+Dec 06, 2018 8:50:51 AM com.ack.GcmServer$3 processPacket
+INFO: ACK received for message 1544104251311 from fh012i7Q8DQ:APA91bF7D9u506SwiXqkYf8iYbzSUcDk1wtiqxgZiqEx5vt3L8KV-toQ3Ftnzec51AYTXidZ-nPBHmzGBZMofXYgpP78SEV5S4X1JU1rYh6-EnrnaJyRX_hmhIYFHLgSsxzpLzOE2Rd7
+Dec 06, 2018 8:50:51 AM com.ack.GcmServer$3 processPacket
+INFO: NACK received for message 1544104251331 from df29q8X3ZTU:APA91bEfF5MUxKqRxofQYru2GeB1tC0PIFBdo9cQnA_ZvBiVxT465Y6i2ywsKQHgJkVXiVuYxF7QUe0wqBt1p1BTvk_gggkK6Vvfo3kiJSPC8Rwu8VDlo1ewPZACZbz6zVdNNGG_5jXQ
+Dec 06, 2018 8:50:51 AM com.ack.GcmServer$3 processPacket
+INFO: ACK received for message 1544104251312 from e4pPflfXIUg:APA91bFkQLKfrow0BcLQhhCYtq5t6XjQNzyG81wbptlO_f9NdaYv7Z3nTszQFkc-q5OYfuhhnpRYLRxsNvCc5m54cW3-ahR8NtYEnRwczJeLR8rGX9n6yowYbS1bC3ZCyjncwKhCu-es
+Dec 06, 2018 8:50:51 AM com.ack.GcmServer$3 processPacket
+INFO: ACK received for message 1544104251315 from f9rnYQvY6HE:APA91bEnOf7vC0HeuKDY7aEZSTVkyC_H9CYWufYKqG_LJmJdyeCKaC5LBsNzqmkyIcwSaf8QxWljc_nX12V748oSOsVpYJPOQaem_MhHuAOitMgCWiOb3tlh9wZQt7c-eYee7kg4QCnW
+Dec 06, 2018 8:50:51 AM com.ack.GcmServer$3 processPacket
+INFO: ACK received for message 1544104251329 from df29q8X3ZTU:APA91bEfF5MUxKqRxofQYru2GeB1tC0PIFBdo9cQnA_ZvBiVxT465Y6i2ywsKQHgJkVXiVuYxF7QUe0wqBt1p1BTvk_gggkK6Vvfo3kiJSPC8Rwu8VDlo1ewPZACZbz6zVdNNGG_5jXQ
+Dec 06, 2018 8:50:51 AM com.ack.GcmServer$3 processPacket
+INFO: ACK received for message 1544104251314 from cojl3RUdhkg:APA91bGMi_iDxmk0JaK-8D38UcXAKm5L-BwTHOK0efVsqzX_p7DUWMRZwFMHVouMoTRS6LSAuQ8ClcrONK9CYhFZSOmF2TJFdGijjNimoEz2O70nks8UmhwKtdc-lq5Nz_bt_P2apjfa
+Dec 06, 2018 8:50:51 AM com.ack.GcmServer$3 processPacket
+INFO: NACK received for message 1544104251325 from eKdQFbIK3e8:APA91bGdmBcTYw_Hf9xYfJuosFB8bPIgSCuj94GGiHFg6ZnpZzbzR6VWRfruwHMcuFMB_8siorC5yW00ewgUE7yj35cdyLlOxBmDclimz3xai7hV9kvroDLjrjIe1Clr0Y5g28JX3OJD
+Dec 06, 2018 8:50:51 AM com.ack.GcmServer$3 processPacket
+INFO: ACK received for message 1544104251317 from deR0LLFtHfI:APA91bGN15qzi4Gh5KoE7yrQf1iQLGXA-MVH0Ro6neJoTpLf-OxAcSbZE4DHG8moLSjvNjYuj_P-EGpFWSAHJcXOFrQXNa2Sb8I8zy7MoBfcEmBM-DklJ3qwTzfaxMfT6h2QGZAtuToI
