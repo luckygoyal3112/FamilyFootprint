@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:id="@+id/rootLayout"
+        android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+    android:scaleType="fitXY">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/footprint_homepage_land"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/hp_up">
+        <Button
+            android:layout_width="225dp"
+            android:layout_height="41dp"
+            android:text="@string/title_activity_home_page3"
+            android:layout_margin="5dp"
+            android:id="@+id/buttonOverview"
+            android:textSize="15sp"
+            android:textColor="@color/lightText"
+            android:background="@drawable/btnshapedemo"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@id/terms"
+            android:layout_marginBottom="15dp"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/begin"
+            android:text="SIGN UP"
+            android:layout_above="@id/buttonOverview"
+            android:textColor="@color/darkText"
+            android:background="@drawable/btnshape"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/terms"
+            android:text="By proceeding, you agree to the Terms and Conditions"
+            android:textColor="@color/lightText"
+            android:background="@drawable/btnshapetc"
+            android:textSize="10sp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            />
+
+    </RelativeLayout>
+</RelativeLayout>

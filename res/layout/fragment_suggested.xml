@@ -1,0 +1,18 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrey">
+
+    <!-- A RecyclerView with some commonly used attributes -->
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="2dp"
+        android:choiceMode="singleChoice"
+        android:padding="15dp"
+        android:descendantFocusability="blocksDescendants"
+        />
+</android.support.design.widget.CoordinatorLayout>

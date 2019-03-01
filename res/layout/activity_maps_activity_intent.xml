@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:id="@+id/ToolBarView"
+
+        android:background="@color/colorPrimary"
+        android:textSize="15sp"
+        android:typeface="monospace"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        >
+    </android.support.v7.widget.Toolbar>
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+   />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:background="@color/colorAccent"
+        >.
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/share"
+            android:text="Share"
+            android:layout_alignParentLeft="true"
+            android:background="@color/colorAccent"
+            android:textColor="@color/lightText"
+            android:elevation="4dp"
+            android:paddingLeft="1dp"
+            android:paddingRight="1dp"
+            android:paddingBottom="1dp"
+            android:paddingTop="1dp"
+            />
+        <!--Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/comment"
+            android:text="Add Comment"
+            android:layout_alignParentRight="true"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/colorAccent"
+            android:elevation="4dp"
+            android:paddingRight="1dp"
+            android:paddingBottom="1dp"
+            android:paddingTop="1dp"
+            /-->
+        <!-- android:src="@drawable/icon_comm"
+        android:src="@drawable/icon_share"-->
+    </LinearLayout>
+</RelativeLayout>

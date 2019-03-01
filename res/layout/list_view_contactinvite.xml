@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="5dp"
+    android:background="@drawable/listshape">
+    <!--android:background="@color/grey"
+    android:textColor="@color/black"-->
+    <ImageView android:id="@+id/img_contact"
+        android:layout_marginLeft="15dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:contentDescription="Contacts Image"
+        android:src="@drawable/ic_contact_picture_holo_light"
+        />
+    <!--QuickContactBadge
+        android:id=@+id/quickbadge
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:scaleType="centerCrop"/-->
+    <TextView android:id="@+id/contact_name"
+        android:layout_toRightOf="@id/img_contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/darkText"
+        style="@style/contactNameTitle"/>
+    <TextView
+        android:id="@+id/invite_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/contact_name"
+        android:layout_toRightOf="@id/img_contact"
+        android:textSize="12sp"
+        android:textColor="@color/darkText"
+        />
+    <Button
+        android:id="@+id/reject_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:text="Reject"
+        android:onClick="btnRejectClick"/>
+    <Button
+        android:id="@+id/accept_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/reject_btn"
+        android:layout_marginRight="10dp"
+        android:text="Accept"
+        android:onClick="btnAcceptClick"
+        />
+</RelativeLayout>

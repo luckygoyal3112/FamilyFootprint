@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:id="@+id/ToolBarView"
+        android:background="@color/colorPrimary"
+        android:textSize="15sp"
+        android:typeface="monospace"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="@string/logo_desc"
+            android:textColor="@color/lightText"
+            android:id="@+id/toolbar_title" />
+    </android.support.v7.widget.Toolbar>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/loginpage_blur"/>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+         android:layout_marginTop="87dp"
+         android:id="@+id/layout_profile"
+         android:layout_below="@id/profile_layout"
+         android:orientation="vertical">
+       <EditText
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:inputType="textPersonName"
+           android:id="@+id/editText_user_name"
+           android:ems="10"
+           android:hint="@string/editName"
+           android:layout_gravity="center_horizontal"
+           android:textColor="@color/lightText"
+           android:layout_marginTop="20dp"
+           android:textColorHint="@color/lighterText"
+           android:singleLine="false"
+           android:textColorLink="@color/lighterText"
+           android:backgroundTint="@color/colorline"/>
+       <EditText
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/editPhone"
+           android:hint="@string/editPhone"
+           android:layout_gravity="center_horizontal"
+           android:textColor="@color/lightText"
+           android:inputType="phone"
+           android:ems="10"
+           android:layout_below="@id/editText_user_name"
+           android:layout_marginTop="20dp"
+           android:textColorHint="@color/lighterText"
+           android:backgroundTint="@color/colorline"/>
+    </LinearLayout>
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="60dp"
+    android:layout_alignParentBottom="true"
+    android:id="@+id/hp_up">
+    <Button
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/button_ok"
+       android:text="VERIFY ME"
+       android:layout_above="@id/buttonOverview"
+       android:textColor="@color/darkText"
+       android:background="@drawable/btnshape"
+       android:textSize="20sp"
+       android:layout_centerHorizontal="true"
+       android:layout_marginBottom="40dp"
+       android:layout_alignParentBottom="true"
+       />
+    </RelativeLayout>
+
+</RelativeLayout>
+
