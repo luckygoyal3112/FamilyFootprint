@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+        <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:title="Settings"/>
+    <!--item android:id="@+id/menu_bookmark"
+        android:icon="@drawable/icon_bookmark"
+        android:title="Bookmark"
+        app:showAsAction="always" />
+    <item android:id="@+id/menu_comm"
+        android:icon="@drawable/icon_comm"
+        android:title="Add Comment"
+        app:showAsAction="always"/-->
+    <item android:id="@+id/menu_share"
+        android:icon="@mipmap/ic_share_white"
+        android:title="Share"
+        android:layout_width= "wrap_content"
+        android:layout_height= "wrap_content"
+        android:layout_centerVertical= "true"
+        app:showAsAction="always"/>
+</menu>

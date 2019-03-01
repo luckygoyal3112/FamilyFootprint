@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+        <!--item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_group_collapse_05"/>
+
+    <
+    item android:id="@+id/menu_bookmark"
+        android:icon="@drawable/icon_bookmark"
+        android:title="Bookmark"
+        app:showAsAction="always" /-->
+    <item android:id="@+id/menu_demo"
+        android:title="Know More"
+        android:layout_centerVertical= "true"
+        app:showAsAction="never"/>
+    <item android:id="@+id/menu_tandc"
+        android:title="Terms and Conditions"
+        android:layout_centerVertical= "true"
+        app:showAsAction="never"/>
+</menu>
