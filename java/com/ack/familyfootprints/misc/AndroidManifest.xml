@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ack.familyfootprints"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="com.ack.familytracker.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+
+    <!--
+ The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but are recommended.
+  w
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.example.gcm.permission.C2D_MESSAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_new"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyA2N5DBcSHbR5AtDATELiudk6ojLsCGB6Y" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-7696570925854579~7847542265"/>
+        <activity
+            android:name="com.ack.familyfootprints.HomePage"
+            android:label="@string/title_activity_home_page">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ack.familyfootprints.MainActivity"
+            android:label="@string/title_activity_home_page"></activity>
+        <activity
+            android:name="com.ack.familyfootprints.MapsActivity"
+            android:label="@string/logo_desc"></activity>
+        <activity
+            android:name="com.ack.familyfootprints.ProfilePage"
+            android:label="Create Profile"></activity>
+        <activity
+            android:name="com.ack.familyfootprints.onboarding.LandingDemo"
+            android:label="Create Demo" />
+        <activity
+            android:name="com.ack.familyfootprints.onboarding.LandingDemoMenu"
+            android:label="Demo Menu"
+            android:parentActivityName="com.ack.familyfootprints.MapsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ack.familyfootprints.MapsActivity" />
+        </activity>
+
+        <uses-library android:name="com.google.android.maps" />
+
+        <activity
+            android:name="com.ack.familyfootprints.trackerTab.contactIntent"
+            android:label="contactIntent"></activity>
+        <activity
+            android:name="com.ack.familyfootprints.notificationTab.NotificationIntent"
+            android:label="contactIntent"></activity>
+        <activity
+            android:name="com.ack.familyfootprints.timelineTab.MapsActivityIntent"
+            android:label="MapsActivityIntent"></activity>
+        <activity
+            android:name="com.ack.familyfootprints.trackerTab.trackMapsActivityIntent"
+            android:label="trackMapsActivityIntent"></activity>
+
+        <receiver android:name="com.ack.familyfootprints.timelineTab.LocationGetIntent" />
+
+        <service android:name="com.ack.familyfootprints.GCMClientApp.MyInstanceIDListenerService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="com.ack.familyfootprints.GCMClientApp.GcmServiceListerner">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <!-- [END instanceId_listener] -->
+
+        <activity android:name="com.ack.familyfootprints.trackerTab.trackContacts"></activity>
+        <activity android:name="com.ack.familyfootprints.ProfileActivity"></activity>
+        <activity android:name="com.ack.familyfootprints.trackerTab.searchcon"></activity>
+        <activity android:name="com.ack.familyfootprints.trackerTab.SendInvite"></activity>
+
+        <activity
+            android:name="com.ack.familyfootprints.ContactsListActivity"
+            android:label="@string/activity_contacts_list">
+
+            <!-- android:launchMode="singleTop" -->
+            <!--
+             Add intent-filter for search intent action and specify searchable configuration
+             via meta-data tag. This allows this activity to receive search intents via the
+             system hooks. In this sample this is only used on older OS versions (pre-Honeycomb)
+             via the activity search dialog. See the Search API guide for more information:
+             http://developer.android.com/guide/topics/search/search-dialog.html
+            -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable_contacts" />
+        </activity>
+        <activity
+            android:name="com.ack.familyfootprints.ContactDetailActivity"
+            android:label="@string/activity_contact_detail"
+            android:parentActivityName="com.ack.familyfootprints.ContactsListActivity">
+
+            <!--
+             Define hierarchical parent of this activity, both via the system
+             parentActivityName attribute (added in API Level 16) and via meta-data annotation.
+             This allows use of the support library NavUtils class in a way that works over
+             all Android versions. See the "Tasks and Back Stack" guide for more information:
+             http://developer.android.com/guide/components/tasks-and-back-stack.html
+            -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ack.familyfootprints.ContactsListActivity" />
+        </activity>
+        <activity
+            android:name="com.ack.familyfootprints.SendInvite"
+            android:label="@string/title_activity_send_invite">
+            <meta-data
+                android:name="com.google.android.gms.version"
+                android:value="@integer/google_play_services_version" />
+        </activity>
+
+        <provider
+            android:name="com.ack.familyfootprints.DataProvider"
+            android:authorities="com.ack.familyfootprints"
+            android:exported="false"
+            />
+
+        <service
+            android:name="com.ack.familyfootprints.timelineTab.TrackbookLocService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service
+            android:name="com.ack.familyfootprints.timelineTab.TransitionReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver android:name="com.ack.familyfootprints.timelineTab.postBootServiceStarter" android:enabled="true"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED"
+            android:exported="true">
+
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"></category>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

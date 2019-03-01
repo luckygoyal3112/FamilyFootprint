@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "155711707848",
+    "firebase_url": "https://familytrackbook-6b472.firebaseio.com",
+    "project_id": "familytrackbook-6b472",
+    "storage_bucket": "familytrackbook-6b472.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155711707848:android:57ea1ad32512a88a",
+        "android_client_info": {
+          "package_name": "com.ack.familyfootprints"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "155711707848-cffveugftcg66smabhv6ts50dnsig51i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAETZmUnn41Uodi5dfwES0KSpXUWcb_C_Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
